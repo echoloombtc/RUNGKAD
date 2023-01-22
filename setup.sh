@@ -1,5 +1,11 @@
 #!/bin/bash
+
+# Check Register IP
+MYIP=$(wget -qO- ipinfo.io/ip);
+echo "Checking VPS"
+clear
 cd
+
 # Edit file /etc/systemd/system/rc-local.service
 cat > /etc/systemd/system/rc-local.service <<-END
 [Unit]
